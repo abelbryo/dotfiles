@@ -137,7 +137,7 @@ syntax enable
 
 try
     ""colorscheme desert
-    colorscheme solarized 
+    colorscheme solarized
 catch
 endtry
 
