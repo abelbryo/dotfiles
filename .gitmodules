@@ -25,3 +25,6 @@
 [submodule "sources_non_forked/vundle"]
 	path = sources_non_forked/vundle
 	url = git://github.com/gmarik/vundle.git
+[submodule "sources_non_forked/vim-autotag"]
+	path = sources_non_forked/vim-autotag
+	url = git://github.com/craigemery/vim-autotag.git
