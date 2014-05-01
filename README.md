@@ -1,7 +1,7 @@
 # The Ultimate vimrc by Amix 
-The original repo is (https://github.com/amix/vimrc).
+[ The original repo is (https://github.com/amix/vimrc).
 
-This is just a personal backup copy.
+This is just a personal backup copy. ]
 
 Over the last 8 years I have used and tweaked Vim. This is my Ultimate vimrc.
 
