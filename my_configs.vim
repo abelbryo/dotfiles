@@ -14,7 +14,8 @@ hi MBEChanged              ctermfg=196     ""  ctermbg=
 hi MBEVisibleNormal        ctermfg=33      ""  ctermbg=
 hi MBEVisibleChanged       ctermfg=196     ""  ctermbg=
 hi MBEVisibleActiveNormal  ctermfg=70      ""  ctermbg=
-hi MBEVisibleActiveChanged ctermfg=1           ctermbg=204
+hi MBEVisibleActiveChanged ctermfg=015         ctermbg=088
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " JSBeautify, CSSBeautify, HtmlBeautify
