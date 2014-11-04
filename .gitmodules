@@ -1,0 +1,30 @@
+[submodule "sources_non_forked/minibufexpl"]
+	path = sources_non_forked/minibufexpl
+	url = git://github.com/fholgado/minibufexpl.vim.git
+[submodule "sources_non_forked/numbers.vim"]
+	path = sources_non_forked/numbers.vim
+	url = git://github.com/myusuf3/numbers.vim.git
+[submodule "sources_non_forked/supertab"]
+	path = sources_non_forked/supertab
+	url = git://github.com/ervandew/supertab.git
+[submodule "sources_non_forked/vim-easymotion"]
+	path = sources_non_forked/vim-easymotion
+	url = git://github.com/Lokaltog/vim-easymotion.git
+[submodule "sources_non_forked/vim-jsbeautify"]
+	path = sources_non_forked/vim-jsbeautify
+	url = git://github.com/maksimr/vim-jsbeautify.git
+[submodule "sources_non_forked/vim-latex"]
+	path = sources_non_forked/vim-latex
+	url = git://github.com/jcf/vim-latex.git
+[submodule "sources_non_forked/vim-matchit"]
+	path = sources_non_forked/vim-matchit
+	url = git://github.com/edsono/vim-matchit
+[submodule "sources_non_forked/vim-scala"]
+	path = sources_non_forked/vim-scala
+	url = git://github.com/derekwyatt/vim-scala.git
+[submodule "sources_non_forked/vundle"]
+	path = sources_non_forked/vundle
+	url = git://github.com/gmarik/vundle.git
+[submodule "sources_non_forked/vim-autotag"]
+	path = sources_non_forked/vim-autotag
+	url = git://github.com/craigemery/vim-autotag.git

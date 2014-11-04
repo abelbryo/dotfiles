@@ -1,3 +1,10 @@
+" Reload vimrc on change
+augroup reload_vimrc
+    autocmd!
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END
+
+
 """"""""""""""""""""""""""""""""""""""""
 " Molokai color scheme
 """"""""""""""""""""""""""""""""""""""""
@@ -16,15 +23,14 @@ hi MBEVisibleChanged       ctermfg=196     ""  ctermbg=
 hi MBEVisibleActiveNormal  ctermfg=70      ""  ctermbg=
 hi MBEVisibleActiveChanged ctermfg=015         ctermbg=088
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " JSBeautify, CSSBeautify, HtmlBeautify
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <c-f> :call JsBeautify()<cr>
+" "map <c-f> :call JsBeautify()<cr>
 " or
 autocmd FileType javascript noremap <buffer> <c-f> :call JsBeautify()<cr>
 " for html
-autocmd FileType htmlm4 noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
@@ -169,6 +175,14 @@ function! MyPrev()
 endfunction
 
 
+" Disable syntastic for java
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['js', 'py'], 'passive_filetypes': ['java','sbt','html'] }
 
-" Keep the line on all the time
+
+if has("gui_running")
+    set guifont=LetterGothic:h14
+    colorscheme desert
+endif
+
 set nu
+set mouse=a
