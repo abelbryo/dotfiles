@@ -181,6 +181,7 @@ let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['js', 'py'],
 
 if has("gui_running")
     set guifont=LetterGothic:h14
+    highlight Comment gui=italic
     colorscheme desert
 endif
 
