@@ -136,8 +136,7 @@ set foldcolumn=1
 syntax enable
 
 try
-    ""colorscheme desert
-    colorscheme solarized
+    colorscheme molokai
 catch
 endtry
 
