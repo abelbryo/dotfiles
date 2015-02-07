@@ -180,9 +180,9 @@ let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['js', 'py'],
 
 
 if has("gui_running")
-    set guifont=Inconsolata:h18
+    set guifont=Menlo:h14
     highlight Comment gui=italic
-    colorscheme solarized
+    colorscheme pyte 
     " set background=light
 endif
 
