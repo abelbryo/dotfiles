@@ -99,7 +99,9 @@ let g:scala_sort_accross_groups=1
 " Scalariform command for use with vim
 " Scalariform is a code formatter for scala
 """""""""""""""""""""""""""""""""""""""""""""
-au BufEnter *.scala setl formatprg=~/.scalariform/scalariform\ --stdin\ --stdout
+" au BufEnter *.scala setl formatprg=~/.scalariform/scalariform\ -f\ -q\ +alignParameters\ --stdin\ --stdout
+au BufEnter *.scala setl formatprg=scalariform\ -f\ -q\ +compactControlReadability\ +alignParameters\ +alignSingleLineCaseStatements\ +doubleIndentClassDeclaration\ +preserveDanglingCloseParenthesis\ +preserveSpaceBeforeArguments\ --stdin\ --stdout
+
 
 :au VimEnter * au FileType * if !exists('b:match_words')
                 \ | let b:match_words = &matchpairs | endif
@@ -134,9 +136,9 @@ map <Leaders>k <Plug>(easymotion-k)
 """""""""""""""""
 " Ctags shortcut
 """""""""""""""""
-set tags=tags;/ " By default vim will only look for the tags in the dir of the file
-                " open in the current buffer. This will make vim move up the dir
-                " hierarchy until it has found the file.
+set tags=tags,./tags; " By default vim will only look for the tags in the dir of the file
+                      " open in the current buffer. This will make vim move up the dir
+                      " hierarchy until it has found the file.
 
 let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
 let Tlist_WinWidth = 50
@@ -180,11 +182,35 @@ let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['js', 'py'],
 
 
 if has("gui_running")
-    set guifont=Menlo:h14
+    "set guifont=Menlo:h14
+     set guifont=Monaco:h12
+    "set guifont=LetterGothic:h14
     highlight Comment gui=italic
-    colorscheme pyte 
-    " set background=light
+    colorscheme solarized
+    set background=dark
 endif
 
 set nu
 set mouse=a
+
+"Disable bells and flashing
+set noerrorbells visualbell t_vb=
+if has('autocmd')
+    autocmd GUIEnter * set visualbell t_vb=
+endif
+
+" Copy paste from clipboard to vim and vice versa
+set clipboard=unnamed
+
+" Buffer resizing
+
+" Easy window split movement - instead of <c-w> j use <c-j>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" CtrlP mapping
+""""""""""""""""""
+nnoremap <Leader>p :CtrlP<CR>
+
